@@ -16,9 +16,10 @@
     <Compile Include="$(MSBuildThisFileDirectory)Views\EmpDirList.xaml.cs">
       <DependentUpon>EmpDirList.xaml</DependentUpon>
     </Compile>
-    <Compile Include="$(MSBuildThisFileDirectory)Models\EmpDirForms.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\Employee.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\GeoLocation.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)EmpDirForms.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)EmployeeDirectoryClientWS.cs" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\EmpDirDetail.xaml">

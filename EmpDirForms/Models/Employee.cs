@@ -16,6 +16,7 @@ namespace EmployeeDirectory
 		public string City { get; set; }
 		public string Title { get; set; }
 		public GeoLocation GeoLocation { get; set; }
+
 		public string Initials {
 			get { 
 				Regex initials = new Regex (@"(\b[a-zA-Z])[a-zA-Z]* ?");
@@ -24,15 +25,15 @@ namespace EmployeeDirectory
 			}
 		}
 
-		public Employee (string name, string email, string phone, string city, string twitter, string title)
-		{
-			FullName = name;
-			Email = email;
-			Phone = phone;
-			Twitter = twitter;
-			Title = title;
-			City = city;
-		}
+//		public Employee (string name, string email, string phone, string city, string twitter, string title)
+//		{
+//			FullName = name;
+//			Email = email;
+//			Phone = phone;
+//			Twitter = twitter;
+//			Title = title;
+//			City = city;
+//		}
 	}
 }
 

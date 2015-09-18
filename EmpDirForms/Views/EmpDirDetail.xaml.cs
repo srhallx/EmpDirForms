@@ -10,6 +10,7 @@ namespace EmpDirForms
 	{
 		public EmpDirDetail (Employee data)
 		{
+
 			InitializeComponent ();
 
 			//Bind data to form
@@ -20,6 +21,7 @@ namespace EmpDirForms
 				MapSpan.FromCenterAndRadius(
 					new Position(data.GeoLocation.Lattitude,data.GeoLocation.Longitude), Distance.FromMiles(5)));
 		}
+			
 	}
 }
 

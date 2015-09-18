@@ -24,6 +24,35 @@ namespace EmployeeDirectory
 		}
 
 
+		public async Task<Employee[]> AllEmployees ()
+		{
+			WorklightProcedureInvocationData invocationData;
+			WorklightResponse task;
+
+			try {
+
+				await ConnectMobileFirst();
+
+				invocationData = new WorklightProcedureInvocationData (
+					MFPAdapter, "allEmployees", new object[] {});
+				task = await WorklightClientInstance.InvokeProcedure (invocationData);
+
+				if (task.Success) {
+
+					Employee[] emp = ParseEmployeeResultSet((JsonObject)task.ResponseJSON);
+
+					return emp;
+
+				} else {
+					throw new Exception ("Adapter procedure failed.");
+				}
+			} catch (Exception ex) {
+				Console.WriteLine (ex.Message);
+			}
+
+			return null;
+		}
+
 		public async Task<Employee[]> FindEmployee (string empName)
 		{
 			WorklightProcedureInvocationData invocationData;
@@ -49,35 +78,6 @@ namespace EmployeeDirectory
 				Console.WriteLine (ex.Message);
 			}
 				
-			return null;
-		}
-
-		public async Task<Employee[]> AllEmployees ()
-		{
-			WorklightProcedureInvocationData invocationData;
-			WorklightResponse task;
-
-			try {
-
-				await ConnectMobileFirst();
-					
-				invocationData = new WorklightProcedureInvocationData (
-					MFPAdapter, "allEmployees", new object[] {});
-				task = await WorklightClientInstance.InvokeProcedure (invocationData);
-
-				if (task.Success) {
-
-					Employee[] emp = ParseEmployeeResultSet((JsonObject)task.ResponseJSON);
-
-					return emp;
-
-				} else {
-					throw new Exception ("Adapter procedure failed.");
-				}
-			} catch (Exception ex) {
-				Console.WriteLine (ex.Message);
-			}
-
 			return null;
 		}
 

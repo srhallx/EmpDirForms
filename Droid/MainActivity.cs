@@ -24,8 +24,6 @@ namespace EmpDirForms.Droid
 
 			LoadApplication (new App ());
 
-
-
 		}
 	}
 }

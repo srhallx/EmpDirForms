@@ -100,6 +100,7 @@
     <Reference Include="Xamarin.Forms.Maps">
       <HintPath>..\packages\Xamarin.Forms.Maps.1.4.2.6359\lib\Xamarin.iOS10\Xamarin.Forms.Maps.dll</HintPath>
     </Reference>
+    <Reference Include="System.Net.Http" />
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\Default.png" />
@@ -118,9 +119,9 @@
     <BundleResource Include="Resources\Icon-Small-40%402x.png" />
     <BundleResource Include="Resources\Icon-Small-40%403x.png" />
     <BundleResource Include="worklight.plist" />
-    <BundleResource Include="Resources\icon-twitter.png" />
-    <BundleResource Include="Resources\icon-email.png" />
-    <BundleResource Include="Resources\icon-phone.png" />
+    <BundleResource Include="Resources\icontwitter.png" />
+    <BundleResource Include="Resources\iconphone.png" />
+    <BundleResource Include="Resources\iconemail.png" />
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="Resources\LaunchScreen.storyboard" />
