@@ -8,7 +8,7 @@ This project demonstrates simple integration between IBM MobileFirst Platform an
 ## Solution Architecture
 This project requires the IBM MobileFirst Platform, with the project in the EmployeeDirectory directory deployed to it. Copy this directory to your MobileFirst Platform apps directory, build and deploy through [MFP CLI](https://developer.ibm.com/mobilefirstplatform/documentation/getting-started-7-0/advanced-client-side-development/using-cli-create-build-manage-project-artifacts/#export).
 
-## Data source
+## Data Source
 The data source for this application is a Cloudant no-SQL database.  I've made a small datasource public so you can try this app without creating your own. However, if you would like to edit the database contents, create your own Cloudant data source and modify the EmployeeAdapter.xml file with the new location of the database.  If your record sets have a different name, you'll also need to modify EmployeeAdapter-impl.js accordingly.
 
 ## Mobile App Architecture
