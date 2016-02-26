@@ -13,7 +13,10 @@ namespace EmpDirForms
 		public App ()
 		{
 			// The root page of your application
-			MainPage = new NavigationPage(new EmpDirList());
+			var navPage = new NavigationPage(new EmpDirList());
+			navPage.BarBackgroundColor = Color.FromHex ("E28400");
+			navPage.BarTextColor = Color.White;
+			MainPage = navPage;
 		}
 
 		protected override void OnStart ()

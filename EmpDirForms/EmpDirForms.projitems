@@ -19,7 +19,6 @@
     <Compile Include="$(MSBuildThisFileDirectory)Models\Employee.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\GeoLocation.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)EmpDirForms.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)EmployeeDirectoryClientWS.cs" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\EmpDirDetail.xaml">

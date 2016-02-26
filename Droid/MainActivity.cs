@@ -22,6 +22,8 @@ namespace EmpDirForms.Droid
 
 			App.EmpDirClient = new EmployeeDirectory.EmployeeDirectoryClient (WorklightClient.CreateInstance(this));
 
+			this.ActionBar.SetIcon(Android.Resource.Color.Transparent);
+
 			LoadApplication (new App ());
 
 		}

@@ -27,14 +27,20 @@ namespace EmpDirForms
 
 			//Item clicked
 			itemListview.ItemSelected += async (sender, e) =>  {
-				var selectedData = (Employee)e.SelectedItem;
 
-				//Retrieve geo data
-				selectedData.GeoLocation = await App.EmpDirClient.GetGeolocation(selectedData.City);
+				if (e.SelectedItem != null)
+				{
+					var selectedData = (Employee)e.SelectedItem;
 
-				var nextPage = new EmpDirDetail(selectedData);
+					//Retrieve geo data
+					selectedData.GeoLocation = await App.EmpDirClient.GetGeolocation(selectedData.City);
 
-				await Navigation.PushAsync(nextPage);
+					var nextPage = new EmpDirDetail(selectedData);
+
+					await Navigation.PushAsync(nextPage);
+
+					itemListview.SelectedItem = null;
+				}
 
 			};
 				

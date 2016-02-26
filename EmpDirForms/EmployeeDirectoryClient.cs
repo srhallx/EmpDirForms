@@ -24,6 +24,8 @@ namespace EmployeeDirectory
 		}
 
 
+
+
 		public async Task<Employee[]> AllEmployees ()
 		{
 			WorklightProcedureInvocationData invocationData;
@@ -35,12 +37,12 @@ namespace EmployeeDirectory
 
 				invocationData = new WorklightProcedureInvocationData (
 					MFPAdapter, "allEmployees", new object[] {});
+				
 				task = await WorklightClientInstance.InvokeProcedure (invocationData);
 
 				if (task.Success) {
 
 					Employee[] emp = ParseEmployeeResultSet((JsonObject)task.ResponseJSON);
-
 					return emp;
 
 				} else {
@@ -52,6 +54,9 @@ namespace EmployeeDirectory
 
 			return null;
 		}
+
+
+
 
 		public async Task<Employee[]> FindEmployee (string empName)
 		{

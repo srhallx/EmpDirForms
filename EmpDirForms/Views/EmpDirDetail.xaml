@@ -10,26 +10,38 @@
 		<StackLayout Orientation="Vertical">
 
 			<StackLayout Orientation="Vertical" Padding="15,25,0,0">
-				<Label Text="{Binding FullName}" FontFamily="Helvetica" FontSize="30" TextColor="#225378">
+				<Label Text="{Binding FullName}" FontFamily="Helvetica" FontSize="30" TextColor="#0B61A3">
 					<Label.TextColor>
-						<OnPlatform x:TypeArguments="Color" iOS="#225378" Android="White" />
+						<OnPlatform x:TypeArguments="Color" iOS="#0B61A3" Android="White" />
 					</Label.TextColor>
 				</Label>
-				<Label Text="{Binding Title}" FontFamily="Helvetica" FontSize="16" TextColor="Gray"/>
+				<Label Text="{Binding Title}" FontFamily="Helvetica" FontSize="16" TextColor="#C57100"/>
 
-				<StackLayout Orientation="Horizontal" Padding="0,25,0,15">
+				<StackLayout Orientation="Horizontal" Padding="25,25,0,15">
 					<Image Source="iconemail.png" WidthRequest="24" HeightRequest="24"/>
-					<Label Text="{Binding Email}" FontSize="20" />
+					<Label Text="{Binding Email}" FontSize="16" TextColor="#C57100" VerticalOptions="Center">
+						<Label.TextColor>
+							<OnPlatform x:TypeArguments="Color" iOS="#C57100" Android="White" />
+						</Label.TextColor>
+					</Label>
 				</StackLayout>
 
-				<StackLayout Orientation="Horizontal" Padding="0,0,0,15">
+				<StackLayout Orientation="Horizontal" Padding="25,0,0,15">
 					<Image Source="iconphone.png" WidthRequest="24" HeightRequest="24"/>
-					<Label Text="{Binding Phone}" FontSize="20" />
+					<Label Text="{Binding Phone}" FontSize="16" TextColor="#C57100" VerticalOptions="Center">
+						<Label.TextColor>
+							<OnPlatform x:TypeArguments="Color" iOS="#C57100" Android="White" />
+						</Label.TextColor>
+					</Label>
 				</StackLayout>
 
-				<StackLayout Orientation="Horizontal" Padding="0,0,0,15">
+				<StackLayout Orientation="Horizontal" Padding="25,0,0,15">
 					<Image Source="icontwitter.png" WidthRequest="24" HeightRequest="24" />
-					<Label Text="{Binding Twitter}" FontSize="20" />
+					<Label Text="{Binding Twitter}" FontSize="16" TextColor="#C57100" VerticalOptions="Center">
+						<Label.TextColor>
+							<OnPlatform x:TypeArguments="Color" iOS="#C57100" Android="White" />
+						</Label.TextColor>
+					</Label>
 				</StackLayout>
 			</StackLayout>
 
