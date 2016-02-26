@@ -2,6 +2,9 @@
 
 This project demonstrates simple integration between IBM MobileFirst Platform and Xamarin.
 
+![Screen Images](https://github.com/srhallx/EmpDirForms/blob/master/EmployeeScreen1.png "Employee List")
+![Screen Images](https://github.com/srhallx/EmpDirForms/blob/master/EmployeeScreen2.png "Employee Detail")
+
 ## Solution Architecture
 This project requires the IBM MobileFirst Platform, with the project in the EmployeeDirectory directory deployed to it. Copy this directory to your MobileFirst Platform apps directory, build and deploy through [MFP CLI](https://developer.ibm.com/mobilefirstplatform/documentation/getting-started-7-0/advanced-client-side-development/using-cli-create-build-manage-project-artifacts/#export).
 
